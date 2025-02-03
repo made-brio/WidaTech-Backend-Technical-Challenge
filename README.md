@@ -17,6 +17,7 @@ This repository contains the solution for WidaTech's Backend Engineer Technical 
   - [Invoice CRUD API](#invoice-crud-api)
   - [CSV/XLSX Import API](#csvxlsx-import-api)
 - [Problem-Solving Algorithm](#problem-solving-algorithm)
+- [API Documentation Link](#api-documentation-link)
 - [License](#license)
 
 ---
@@ -102,7 +103,7 @@ This repository contains the solution for WidaTech's Backend Engineer Technical 
      ```
 
 3. **Update Invoice**  
-   - **Endpoint:** `PUT /api/invoices/:invoice_no`
+   - **Endpoint:** `PUT /api/invoices/`
    - **Request Body:**
      ```json
      {
@@ -148,6 +149,12 @@ This function generates all possible unique combinations of non-repeating digits
   combinations := findCombinations(3, 8)
   fmt.Println(combinations) // Output: [[1,2,5], [1,3,4]]
   ```
+
+---
+
+## API Documentation Link
+
+For detailed API usage and testing, please refer to the [Postman API Documentation](https://documenter.getpostman.com/view/25243359/2sAYX3sjLK).
 
 ---
 
