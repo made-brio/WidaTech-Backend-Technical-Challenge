@@ -62,29 +62,58 @@ This repository contains the solution for WidaTech's Backend Engineer Technical 
    - **Request Body:**
      ```json
      {
-       "invoice_no": "INV001",
-       "date": "2023-01-01",
-       "customer_name": "John Doe",
-       "salesperson_name": "Jane Smith",
-       "payment_type": "CASH",
-       "notes": "First transaction",
-       "products": [
-         {
-           "item_name": "Product A",
-           "quantity": 2,
-           "total_cost_of_goods_sold": 50,
-           "total_price_sold": 70
-         }
-       ]
+         "id": 1,
+         "invoice_no": "INV-12345",
+         "date": "2025-01-24T00:00:00Z",
+         "customer_name": "John Doe",
+         "salesperson_name": "Jane Smith",
+         "payment_type": "CASH",
+         "notes": "Invoice for purchase",
+         "products": [
+             {
+                 "id": 1,
+                 "invoice_no": "INV-12345",
+                 "item_name": "Product A",
+                 "quantity": 10,
+                 "total_cost": 50.0,
+                 "total_price": 100.0
+             },
+             {
+                 "id": 2,
+                 "invoice_no": "INV-12345",
+                 "item_name": "Product B",
+                 "quantity": 5,
+                 "total_cost": 25.0,
+                 "total_price": 50.0
+             }
+         ]
      }
      ```
 
 2. **Read Invoices**  
    - **Endpoint:** `GET /api/invoices`  
-   - **Query Parameters:** `date`, `size`, `page`
+   - **Query Parameters:**
+     ```json
+     {
+         "page": 1,
+         "size": 10,
+         "date": "2021-01-01T00:00:00Z"
+     }
+     ```
 
 3. **Update Invoice**  
    - **Endpoint:** `PUT /api/invoices/:invoice_no`
+   - **Request Body:**
+     ```json
+     {
+         "invoice_no": "INV-12345",
+         "date": "2025-01-24T00:00:00Z",
+         "customer_name": "John Doe Updated",
+         "salesperson_name": "Jane Smith Updated",
+         "payment_type": "CREDIT",
+         "notes": "Updated Invoice"
+     }
+     ```
 
 4. **Delete Invoice**  
    - **Endpoint:** `DELETE /api/invoices/:invoice_no`
